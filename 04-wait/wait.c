@@ -27,11 +27,18 @@ main()
     }
 
     pid_t cpid;
-    for (int i=0; i<3; i++) {
-        cpid= wait(NULL);
+    //for (int i=0; i<3; i++) {
+    //    cpid= wait(NULL);
+    //    if(cpid == -1) {
+    //        perror("wait error");
+    //        return -1;
+    //    }
+    //}
+    while(1) {
+        cpid = wait(NULL);
         if(cpid == -1) {
             perror("wait error");
-            //return -1;
+            break;
         }
     }
     
