@@ -17,11 +17,11 @@ main()
     pid = fork();
 
     if(pid == 0) {
-        memset(buf, 0, sizeof(buf));
         strcpy(buf, "hello world\n");
         write(fd[1], buf, strlen(buf));
         // 等待父进程读取完管道内容
         sleep(2);
+        memset(buf, 0, sizeof(buf));
         int len = read(fd[0], buf, sizeof(buf));
         printf("parent say: %s", buf);
         close(fd[0]);
@@ -29,11 +29,12 @@ main()
         return 0;
     }
 
+    memset(buf, 0, sizeof(buf));
     int len = read(fd[0], buf, sizeof(buf));
     printf("child say: %s", buf);
+    fflush(stdout);
     memset(buf, 0, sizeof(buf));
     strcpy(buf, "fuck the world child\n");
-    sleep(1);
     write(fd[1], buf, strlen(buf));
     wait(NULL);
     close(fd[0]);
