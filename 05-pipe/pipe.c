@@ -13,6 +13,9 @@ main()
         return -1;
     }
 
+    // 将数据置0，避免产生随机字符的情况
+    memset(buf, 0, sizeof(buf));
+
     pid_t pid;
     pid = fork();
 
@@ -21,6 +24,7 @@ main()
         write(fd[1], buf, strlen(buf));
         // 等待父进程读取完管道内容
         sleep(2);
+        // 清空字符串，避免数据重叠
         memset(buf, 0, sizeof(buf));
         int len = read(fd[0], buf, sizeof(buf));
         printf("parent say: %s", buf);
@@ -29,10 +33,11 @@ main()
         return 0;
     }
 
-    memset(buf, 0, sizeof(buf));
     int len = read(fd[0], buf, sizeof(buf));
     printf("child say: %s", buf);
+    // 立即输出字符串，避免输出混乱
     fflush(stdout);
+    // 清空字符串，避免输入数据混乱
     memset(buf, 0, sizeof(buf));
     strcpy(buf, "fuck the world child\n");
     write(fd[1], buf, strlen(buf));
