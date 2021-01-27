@@ -6,6 +6,11 @@
 #include <string.h>
 #include <stdlib.h>
 
+/**
+ * 使用共享内存写入内容到文件
+ *
+ */
+
 typedef struct {
     char name[2];
     char age[3];

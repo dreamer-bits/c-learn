@@ -4,6 +4,11 @@
 #include <unistd.h>
 #include <sys/mman.h>
 
+/**
+ * 使用共享映射实现两个进程通讯，写端
+ *
+ */
+
 int
 main()
 {
