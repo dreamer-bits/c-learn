@@ -8,6 +8,9 @@ share_w: share_w.c
 share_r: share_r.c
 	gcc share_r.c -o share_r
 
+share_a: share_a.c
+	gcc share_a.c -o share_a
+
 .PHONY: clean sw
 
 clean:
@@ -15,9 +18,13 @@ clean:
 	rm -rf sharefile
 	rm -rf share_w
 	rm -rf share_r
+	rm -rf share_a
 
 sw: share_w
 	./share_w
 
 sr: share_r
 	./share_r
+
+sa: share_a
+	./share_a
