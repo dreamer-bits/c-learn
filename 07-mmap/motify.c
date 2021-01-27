@@ -24,13 +24,16 @@ main()
     fd = open(path, O_CREAT|O_RDWR|O_TRUNC);
     if(fd < 0) {
         perror("open file error");
+        return 1;
     }
 
     if(lseek(fd, (sizeof(person) * 5) - 1, SEEK_SET) < 0) {
         perror("lseek error");
+        return 2;
     }
     if(write(fd, "", 1) < 0) {
         perror("write error");
+        return 3;
     }
 
     p = (person *)mmap(NULL, pagesize, PROT_READ|PROT_WRITE, MAP_SHARED, 
