@@ -1,0 +1,39 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFSIZE	06-fifo/fifo_r.c	8;"	d	file:
+BUF_SIZE	07-mmap/share_a.c	5;"	d	file:
+__CALC_H_	01-static_library/include/calc.h	2;"	d
+__CALC_H_	02-shared_library/include/calc.h	2;"	d
+add	01-static_library/src/add.c	/^add(int a, int b)$/;"	f
+add	02-shared_library/src/add.c	/^add(int a, int b)$/;"	f
+age	07-mmap/motify.c	/^    char age[3];$/;"	m	struct:__anon1	file:
+div	01-static_library/src/div.c	/^div(int a, int b)$/;"	f
+div	02-shared_library/src/div.c	/^div(int a, int b)$/;"	f
+main	01-static_library/main.c	/^main()$/;"	f
+main	02-shared_library/main.c	/^main()$/;"	f
+main	03-fork/main.c	/^main()$/;"	f
+main	04-wait/orphan.c	/^main()$/;"	f
+main	04-wait/wait.c	/^main()$/;"	f
+main	04-wait/waitpid.c	/^main()$/;"	f
+main	04-wait/zoom.c	/^main()$/;"	f
+main	05-pipe/pipe.c	/^main()$/;"	f
+main	06-fifo/fifo_r.c	/^main()$/;"	f
+main	06-fifo/fifo_w.c	/^main()$/;"	f
+main	07-mmap/motify.c	/^main()$/;"	f
+main	07-mmap/share_a.c	/^main()$/;"	f
+main	07-mmap/share_r.c	/^main()$/;"	f
+main	07-mmap/share_w.c	/^main()$/;"	f
+main	08-signal/sigprocmask.c	/^main()$/;"	f
+mul	01-static_library/src/mul.c	/^mul(int a, int b) {$/;"	f
+mul	02-shared_library/src/mul.c	/^mul(int a, int b) {$/;"	f
+name	07-mmap/motify.c	/^    char name[2];$/;"	m	struct:__anon1	file:
+obj	01-static_library/Makefile	/^obj = src\/add.o src\/div.o src\/mul.o src\/sub.o$/;"	m
+obj	02-shared_library/Makefile	/^obj = src\/add.o src\/div.o src\/mul.o src\/sub.o$/;"	m
+person	07-mmap/motify.c	/^} person;$/;"	t	typeref:struct:__anon1	file:
+printsigset	08-signal/util.c	/^printsigset(const sigset_t *set)$/;"	f
+sub	01-static_library/src/sub.c	/^sub(int a, int b)$/;"	f
+sub	02-shared_library/src/sub.c	/^sub(int a, int b)$/;"	f

@@ -14,3 +14,9 @@ printsigset(const sigset_t *set)
     }
     puts("");
 }
+
+void
+do_sig(int num)
+{
+    printf("do_sig, num=%d\n", num);
+}
