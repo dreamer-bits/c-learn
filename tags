@@ -13,6 +13,7 @@ add	02-shared_library/src/add.c	/^add(int a, int b)$/;"	f
 age	07-mmap/motify.c	/^    char age[3];$/;"	m	struct:__anon1	file:
 div	01-static_library/src/div.c	/^div(int a, int b)$/;"	f
 div	02-shared_library/src/div.c	/^div(int a, int b)$/;"	f
+do_sig	08-signal/util.c	/^do_sig(int num)$/;"	f
 main	01-static_library/main.c	/^main()$/;"	f
 main	02-shared_library/main.c	/^main()$/;"	f
 main	03-fork/main.c	/^main()$/;"	f
@@ -27,7 +28,9 @@ main	07-mmap/motify.c	/^main()$/;"	f
 main	07-mmap/share_a.c	/^main()$/;"	f
 main	07-mmap/share_r.c	/^main()$/;"	f
 main	07-mmap/share_w.c	/^main()$/;"	f
+main	08-signal/sigaction.c	/^main(void)$/;"	f
 main	08-signal/sigprocmask.c	/^main()$/;"	f
+main	09-daemon/main.c	/^main(void)$/;"	f
 mul	01-static_library/src/mul.c	/^mul(int a, int b) {$/;"	f
 mul	02-shared_library/src/mul.c	/^mul(int a, int b) {$/;"	f
 name	07-mmap/motify.c	/^    char name[2];$/;"	m	struct:__anon1	file:
@@ -35,5 +38,6 @@ obj	01-static_library/Makefile	/^obj = src\/add.o src\/div.o src\/mul.o src\/sub
 obj	02-shared_library/Makefile	/^obj = src\/add.o src\/div.o src\/mul.o src\/sub.o$/;"	m
 person	07-mmap/motify.c	/^} person;$/;"	t	typeref:struct:__anon1	file:
 printsigset	08-signal/util.c	/^printsigset(const sigset_t *set)$/;"	f
+start_daemon	09-daemon/daemon.c	/^start_daemon()$/;"	f
 sub	01-static_library/src/sub.c	/^sub(int a, int b)$/;"	f
 sub	02-shared_library/src/sub.c	/^sub(int a, int b)$/;"	f
